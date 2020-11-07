@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> 
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">//babel para o navegador interpretar codigo
+      class App extends React.Component{
+        state={
+            name: ' ',
+            
+        }//usar o estado 
+
+
+
+        handleChange= (e)=>{
+          this.setState({
+            name: e.target.value.toUpperCase()
+          });
+        }
+
+        handleLimpa= (e)=>{
+          this.setState({
+            name: document.getElementById('campo').value=''
+          });
+        }//limpa campo 
+
+        
+      
+        render(){
+          return(
+            <div className= "app-content">
+          
+
+            <h1>Converte para Maiúsculas </h1>
+
+              <form >
+                  
+                  <textarea name="" id="campo" cols="90" rows="10" type="text" onChange={(this.handleChange)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
+                  
+               <br></br>
+                  
+                  <button onClick={(this.handleLimpa)}>Limpa</button>
+              
+              </form>
+              <h3>Resultado</h3>
+              
+                <h1 style={{color: "red", backgroundColor: "lightblue", border: '5px solid red', align: "center", margin:" 0% 20%" }} > {this.state.name} </h1>
+            
+               
+             
+             
+             
+            </div>
+
+          )
+        }
+      }
+      ReactDOM.render(<App/>, document.getElementById('app')); //paramentros: nome da class componente e o id que recebe o componente
+    </script>
+
+    
+</body>
+</html>
