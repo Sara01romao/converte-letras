@@ -26,9 +26,19 @@
           });
         }
 
-        handleLimpa= (e)=>{
+        handleMinuscula= (e)=>{
           this.setState({
-            name: document.getElementById('campo').value=''
+            
+             name: e.target.value.toLowerCase()
+          });
+        }
+
+        handleLimpa= (e)=>{
+          e.preventDefault();
+          this.setState({
+           
+            name: document.getElementById('campo1').value='',
+            name: document.getElementById('campo2').value=''
           });
         }//limpa campo 
 
@@ -43,16 +53,24 @@
 
               <form >
                   
-                  <textarea name="" id="campo" cols="90" rows="10" type="text" onChange={(this.handleChange)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
-                  
+                  <textarea name="" id="campo1" cols="90" rows="10" type="text" onChange={(this.handleChange)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
+                  <br></br>
+                  <h1>Converte para Minúsculo </h1>
+              
+
+                  <textarea name="" id="campo2" cols="90" rows="10" type="text" onChange={(this.handleMinuscula)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
+
                <br></br>
                   
                   <button onClick={(this.handleLimpa)}>Limpa</button>
+                
               
               </form>
-              <h3>Resultado</h3>
+
+              <hr></hr>
+              <h2>Resultado</h2>
               
-                <h1 style={{color: "red", backgroundColor: "lightblue", border: '5px solid red', align: "center", margin:" 0% 20%" }} > {this.state.name} </h1>
+                <h1 style={{color: "black", backgroundColor: "lightblue", border: '1px solid blue', align: "center", margin:" 0% 20%" }} > {this.state.name} </h1>
             
                
              
