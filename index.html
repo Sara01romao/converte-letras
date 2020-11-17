@@ -49,32 +49,33 @@
             <div className= "app-content">
           
 
-            <h1>Converte para Maiúsculas </h1>
+            <h1 style={{textAlign: "center"}}>Converte para Maiúsculas </h1>
 
               <form >
                   
-                  <textarea name="" id="campo1" cols="90" rows="10" type="text" onChange={(this.handleChange)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
+                  <textarea name="" id="campo1" cols="60" rows="10" type="text" onChange={(this.handleChange)} placeholder="add o texto" style={{margin:"0px 450px"}}></textarea>
                   <br></br>
-                  <h1>Converte para Minúsculo </h1>
+                  <hr style={{border: "3px solid black", margin:"10px 500px"}}></hr>
+
+                  <h1 style={{textAlign: "center"}}>Converte para Minúsculo </h1>
               
 
-                  <textarea name="" id="campo2" cols="90" rows="10" type="text" onChange={(this.handleMinuscula)} placeholder="add o texto" style={{margin:"0px 300px"}}></textarea>
+                  <textarea name="" id="campo2" cols="60" rows="10" type="text" onChange={(this.handleMinuscula)} placeholder="add o texto" style={{margin:"0px 450px"}}></textarea>
 
                <br></br>
                   
-                  <button onClick={(this.handleLimpa)}>Limpa</button>
-                
+                  <button onClick={(this.handleLimpa)} style={{margin:"20px 625px", width: "100px", height:"30px", backgroundColor: "red", color: "white"}}>Limpa</button>
+                  
               
               </form>
 
               <hr></hr>
-              <h2>Resultado</h2>
+              <h2 style={{textAlign: "center", color: "blue"}}>Resultado</h2>
               
-                <h1 style={{color: "black", backgroundColor: "lightblue", border: '1px solid blue', align: "center", margin:" 0% 20%", overflow:"hidden" }} > {this.state.name} </h1>
+                <textarea name="" id="" cols="60" rows="10" value={this.state.name} style={{margin:"0px 450px", backgroundColor: "lightblue"}}></textarea>
             
-               
 
-       
+           
              
              
             </div>
