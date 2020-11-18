@@ -1,7 +1,10 @@
 
 
+<h1 align="center">
+     ⌨✏💻  
+</h12>
 
-## 💻  CONVERTE LETRAS PARA MAIÚSCULA E MINÚSCULA
+##   CONVERTE LETRAS PARA MAIÚSCULA E MINÚSCULA
 Projeto desenvolvido para práticar o início dos estudos em reactjs
 
 <br>
